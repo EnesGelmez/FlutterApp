@@ -2,8 +2,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:test_project1/constants.dart';
+import 'package:test_project1/screens/sign_up/login/sign_up_screen.dart';
 import '../../../components/rounded_button.dart';
 import 'background.dart';
+import 'package:test_project1/screens/login/login_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -15,26 +17,55 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(40),
+            child: Image.asset(
+              "assets/images/logo.png",
+              width: size.width * 0.3,
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
           const Text(
-            "WOLCOME TO MY APP",
+            "LOBİTEK LTP",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kTextColor,
             ),
           ),
-          SvgPicture.asset(
-            "assets/icons/chat.svg",
-            height: size.height * 0.45,
+          const SizedBox(
+            height: 60,
           ),
           RoundedButton(
             text: "LOGIN",
-            color: kButtonColor,
-            press: () {},
+            color: kButtonColorBlue,
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginScreen()),
+              );
+            },
+          ),
+          const SizedBox(
+            height: 10,
           ),
           RoundedButton(
-            text: "REGISTER",
-            press: () {},
-            color: Colors.white,
+            text: "SIGN UP",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignUpScreen();
+                  },
+                ),
+              );
+            },
+            color: kButtonColorPink,
+          ),
+          const SizedBox(
+            height: 50,
           ),
         ],
       ),
