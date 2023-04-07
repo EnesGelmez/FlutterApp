@@ -38,6 +38,7 @@ class Body extends StatelessWidget {
             height: 60,
           ),
           RoundedButton(
+            width: size.width * 0.8,
             text: "LOGIN",
             color: kButtonColorBlue,
             press: () {
@@ -51,6 +52,7 @@ class Body extends StatelessWidget {
             height: 10,
           ),
           RoundedButton(
+            width: size.width * 0.8,
             text: "SIGN UP",
             press: () {
               Navigator.push(

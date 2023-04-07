@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
               borderRadius: BorderRadius.circular(40),
               child: Image.asset(
                 "assets/images/logo.png",
-                width: size.width * 0.3,
+                width: size.width * 0.25,
               ),
             ),
             SizedBox(height: size.height * 0.02),
@@ -48,6 +48,16 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             RoundedInputField(
               hintText: "Your Email Address",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Name",
+              icon: Icons.text_format,
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Surname",
+              icon: Icons.text_format,
               onChanged: (value) {},
             ),
             RoundedPasswordField(

@@ -7,5 +7,4 @@ const kButtonColorBlue = Color.fromARGB(90, 35, 19, 82);
 const kButtonColorPink = Color.fromARGB(255, 133, 161, 206);
 const kTextBoxBGColorWhite = Color.fromARGB(255, 216, 216, 216);
 const kIconsColos = Color.fromARGB(255, 12, 112, 152);
-
 const double kDefaultPadding = 20.0;
